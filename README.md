@@ -44,4 +44,10 @@ rate(request_duration_sum[5m])/rate(request_duration_count[5m])
 ## Import Prometheus Into Grafana
 https://prometheus.io/docs/visualization/grafana/
 
+## Running Docker Prometheus
+```
+docker pull prom/prometheus
+docker run --name prometheus -d -p 9090:9090 -v ./prometheus prom/prometheus:latest
+
+```
 
