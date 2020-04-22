@@ -1,0 +1,14 @@
+# Docker Compose file Reference (https://docs.docker.com/compose/compose-file/)
+
+version: '3'
+
+services:
+
+  # App Service
+  go-prometheus:
+    container_name: go-prometheus
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
