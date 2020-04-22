@@ -10,6 +10,7 @@ https://grafana.com/grafana/download
 brew update
 brew install grafana
 brew services start grafana
+brew services stop grafana
 ```
 ## Prometheus Metrics
 ### Counters
@@ -46,8 +47,11 @@ https://prometheus.io/docs/visualization/grafana/
 
 ## Running Docker Prometheus
 ```
-docker pull prom/prometheus
 docker run --name prometheus -d -p 9090:9090 -v ./prometheus prom/prometheus:latest
+```
 
+## Running Docker Grafana
+```cassandraql
+ docker run --name grafana -p 3000:3000 grafana/grafana   
 ```
 
